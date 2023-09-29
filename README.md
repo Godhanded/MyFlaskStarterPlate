@@ -1,6 +1,5 @@
 # Sample ReadMe
 
-
 ## Table Of Contents
 - [Set up for Local Machine](#set-up-the-server)
 - [Base Uri/Live Deployment](#base-uri)
@@ -10,6 +9,29 @@
   - [Authentication Routes](#authentication)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
+
+## This boiler plate supports the following extensions setup and ready to use
+| extension  | Usecase |
+|-----------|-----------|
+| - bcrypt | password hashing|
+| - black | code formating|
+| - cryptography| encryption|
+| - email-validator | validate emails|
+| - flask-bcrypt |password hashing |
+| - flask-blueprint| Modules |
+| - flask-caching|caching |
+| - flask-cors | cross origin |
+| - flask-limiter| rate limiting|
+| - flask-mail|send mails|
+| - flask-migrate|data base migrations|
+| - flask-session |loggin. server side sessions |
+| - flask-sqlalchemy|database orm |
+| - gunicorn | production server|
+| - pydantic| input type checking |
+| - python-dotenv |environment variables|
+| - redis | caching|
+| - requests| external requests|
+
 
 ## **Api Name API-ENDPOINT DOCUMENTATION**
 ---
