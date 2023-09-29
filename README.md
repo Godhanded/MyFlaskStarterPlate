@@ -69,6 +69,8 @@ With Postgres running, create a `dbname` database:
 ```bash
 $ createdb dbname
 ```
+#### Add env Variables
+create .env file and add variables as in [sample.env](sample.env)
 
 #### Run the Server
 ```bash
