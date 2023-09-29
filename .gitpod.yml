@@ -1,0 +1,29 @@
+---
+# For more details, please see https://www.gitpod.io/docs/references/gitpod-yml
+image: gitpod/workspace-postgres
+
+tasks:
+  - init: 
+      python -m venv venv
+    command: |
+      source venv/bin/activate
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      python run.py
+
+      
+    env:
+      SQLALCHEMY_DATABASE_URI: postgresql://gitpod@localhost/sigt
+
+
+ports:
+  - port: 5000
+    onOpen: ignore
+    visibility: public
+  - port: 5432
+    onOpen: ignore
+
+
+vscode:
+  extensions:
+    - ms-python.python
