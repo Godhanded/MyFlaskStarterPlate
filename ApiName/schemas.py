@@ -16,8 +16,8 @@ class RegisterSchema(BaseModel):
         return v
 
     @validator("confirm_password")
-    def passwords_are_same(cls, v, values):
-        if v != values["password"]:
+    def passwords_are_same(cls, v,values):
+        if "password" in values and v != values["password"]:
             raise ValueError("Passwords do not match")
         return v
 
@@ -76,10 +76,9 @@ class ResetPasswordSchema(StringQuerySchema, ValidEmailSchema):
 
     @validator("confirm_password")
     def passwords_are_same(cls, v, values):
-        if v != values["password"]:
+        if "password" in values and v != values["password"]:
             raise ValueError("Passwords do not match")
         return v
-
 
 class ValidTxSchema(IntQuerySchema):
     tx_hash: constr(min_length=66, max_length=66)

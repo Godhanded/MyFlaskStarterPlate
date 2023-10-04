@@ -54,9 +54,12 @@ def register_user():
             201,
         )
     except ValidationError as e:
-        msg = ""
+        msg = []
         for err in e.errors():
-            msg += f"{str(err.get('loc')).strip('(),')}:{err.get('msg')}, "
+             msg.append({
+                "field": err["loc"][0],
+                "error":err["msg"]
+            })
         return (
             jsonify({"error": "Bad Request", "message": msg}),
             400,
